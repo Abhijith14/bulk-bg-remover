@@ -5,7 +5,7 @@ session = new_session()
 
 for file in Path('input').glob('*.jpg'):
     input_path = str(file)
-    output_path = str(file.parent / (file.stem + ".out.png"))
+    output_path = str(Path('output') / (file.stem + ".png"))
 
     with open(input_path, 'rb') as i:
         with open(output_path, 'wb') as o:
