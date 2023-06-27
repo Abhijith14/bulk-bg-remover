@@ -10,6 +10,6 @@ for file in Path('input').glob('*.jpg'):
     with open(input_path, 'rb') as i:
         with open(output_path, 'wb') as o:
             input = i.read()
-            print(input)
+            print("converting ", input)
             output = remove(input, session=session)
             o.write(output)
